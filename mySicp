@@ -1,0 +1,29 @@
+;defining procedures in Scheme
+
+(define (square x) (* x x))
+
+;if we think in functional terms we can build out procedures using this
+
+(define (sumOfSquares x y) (+ (square x) (square y)))
+
+;how do we use a conditional in Lisp, let's check it out
+
+(define (abs x)
+  (cond ((> x 0) x)
+        ((= x 0) 0)
+        ((< x 0) (- x))))
+
+;Here we are stating if x is greater than 0 then return x
+;else if x equal to 0 then return 0
+;else if x < 0 return -x
+;thusly we have defined absolute value of x!
+;We use the term predicate to talk about procedures that return true or false
+
+;There is an else command in Lisp, we can simplify abs x
+
+(define (abs x)
+  (cond ((< x 0) (-x))
+        (else x)))
+
+;We also have an if in our conditionals
+;Exercise 1.1 Here
