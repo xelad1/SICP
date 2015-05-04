@@ -26,4 +26,5 @@
         (else x)))
 
 ;We also have an if in our conditionals
-;Exercise 1.1 Here
+
+;Recursion principles
