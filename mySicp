@@ -28,3 +28,24 @@
 ;We also have an if in our conditionals
 
 ;Recursion principles
+;Let's take a basic linear recursion model that we've used
+
+(define (factorial n)
+  (if (= n 1)
+    1
+    (* n (factorial (- n 1)))))
+
+;Let's take a look at an iterative version of factorial using Scheme
+
+(define (fact-iter product counter max-count)
+  (if (> counter max-count)
+    product
+    (fact-iter (* counter product)
+               (+ counter 1)
+               max-count)))
+
+(define (factorial n)
+  (fact-iter 1 1 n))
+
+
+
