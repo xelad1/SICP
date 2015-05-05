@@ -48,4 +48,9 @@
   (fact-iter 1 1 n))
 
 
+;Exercise 1.9
 
+(define (+ a b)
+  (if (= a 0)
+    b
+    (inc (+ (dec a) b))))
